@@ -19,8 +19,9 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ```
 
 ## 📷 Screenshot
+![Note Taker](https://user-images.githubusercontent.com/93915846/157271889-7a6a8df5-ac0f-436b-8b22-48318eb217d0.gif)
 
-![Document (2)](https://user-images.githubusercontent.com/93915846/156842303-3963c0c3-79ef-41f3-9278-a337a8109075.gif)
+
 
 ## Table of Contents
 
