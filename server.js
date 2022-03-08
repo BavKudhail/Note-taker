@@ -1,6 +1,7 @@
 // node modules
 const express = require("express");
 const path = require("path");
+const uuid = require("uuid");
 
 const noteData = require("./db/db.json");
 const fs = require("fs");
@@ -37,5 +38,13 @@ app.get("/api/notes", (req, res) => {
 
 // create a note
 app.post("/api/notes", (req, res) => {
-  res.send(req.body);
+  const newNote = {
+    title: req.body.title,
+    text: req.body.text,
+    id: uuid.v4(),
+  };
+
+  noteData.push(newNote);
+
+  res.json(noteData);
 });
