@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 
+const noteData = require("./db/db.json");
 const fs = require("fs");
 
 // initialising express
@@ -12,13 +13,10 @@ app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
 
-// creating routes
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+// set a static folder
+app.use(express.static(path.join(__dirname, "public")));
 
-// endpoints
+// Gets all notes
+app.get("/api/notes", (req, res) => res.json(noteData));
 
-// middleware
-
-// EXPRESS JS CRASH COURSE
+app.post("/api/notes");
