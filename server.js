@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const uuid = require("uuid");
 
-const noteData = require("./db/db.json");
+let noteData = require("./db/db.json");
 const fs = require("fs");
 
 // initialising express
@@ -52,4 +52,11 @@ app.post("/api/notes", (req, res) => {
   fs.writeFile("db/db.json", JSON.stringify(noteData, null, 2), (err) => {
     if (err) throw err;
   });
+});
+
+// Deleting notes
+app.delete("/api/notes/:id", (req, res) => {
+  let { id } = req.params;
+  noteData = noteData.filter((note) => note.id !== id);
+  res.send(`User with the id ${id} has been deleted from the database`);
 });
