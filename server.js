@@ -1,27 +1,24 @@
 // node modules
 const express = require("express");
+const path = require("path");
+
 const fs = require("fs");
 
 // initialising express
 const app = express();
+const PORT = process.env.PORT || 5000;
 
-// PORT variable
-const PORT = process.env.PORT || 3000;
-
-// HTML ROUTES
-
-app.get("/public/notes.html", (req, res) => {
-  res.send(req.body);
-});
-// * `GET /notes` should return the `notes.html` file.
-
-// * `GET *` should return the `index.html` file.
-app.get("/public/index.html", (req, res) => {
-  res.send(req.body);
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
 
-// API ROUTES
+// creating routes
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
-// * `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
+// endpoints
 
-// * `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+// middleware
+
+// EXPRESS JS CRASH COURSE
