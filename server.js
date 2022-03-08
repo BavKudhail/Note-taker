@@ -13,6 +13,10 @@ app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
 
+// Body Parser Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // set a static folder
 app.use(express.static("public"));
 
@@ -28,7 +32,10 @@ app.get("/notes", (req, res) => {
 // API ROUTES
 app.get("/api/notes", (req, res) => {
   res.json(noteData);
+  console.log(noteData[0].text);
 });
 
-app.post("/api/notes");
-
+// create a note
+app.post("/api/notes", (req, res) => {
+  res.send(req.body);
+});
