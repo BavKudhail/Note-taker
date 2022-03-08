@@ -27,6 +27,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 - [Acceptance Criteria](#acceptance-criteria)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
+- [Deployment](#deployment)
 - [Questions](#questions)
 
 ## Acceptance Criteria
@@ -66,6 +67,10 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Usage
 
 - insert gif here
+
+# Deployment
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://note-taker-1967.herokuapp.com/)
 
 ## Questions
 
