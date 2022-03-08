@@ -14,9 +14,21 @@ app.listen(PORT, () => {
 });
 
 // set a static folder
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
-// Gets all notes
-app.get("/api/notes", (req, res) => res.json(noteData));
+// HTML REQUESTS
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "notes.html"));
+});
+
+// API ROUTES
+app.get("/api/notes", (req, res) => {
+  res.json(noteData);
+});
 
 app.post("/api/notes");
+
