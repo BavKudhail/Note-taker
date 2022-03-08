@@ -10,11 +10,12 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// listen for sever
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
 
-// Body Parser Middleware
+// body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -31,9 +32,10 @@ app.get("/notes", (req, res) => {
 });
 
 // API ROUTES
+
+// Get all notes
 app.get("/api/notes", (req, res) => {
   res.json(noteData);
-  console.log(noteData[0].text);
 });
 
 // Create a note
@@ -54,7 +56,7 @@ app.post("/api/notes", (req, res) => {
   });
 });
 
-// Deleting notes
+// Delete a note
 app.delete("/api/notes/:id", (req, res) => {
   let { id } = req.params;
   noteData = noteData.filter((note) => note.id !== id);
