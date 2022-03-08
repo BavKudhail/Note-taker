@@ -2,5 +2,20 @@
   {
     "title": "Test Title",
     "text": "Test text"
+  },
+  {
+    "title": "Batman",
+    "text": "Watch the new Batman movie that is coming in cinema",
+    "id": "0fec5942-f70c-41f9-87f2-b1524a1001ba"
+  },
+  {
+    "title": "Fast & Furious",
+    "text": "Wick What\n",
+    "id": "67ad03c5-31ba-425f-9472-fa901f1fa0e1"
+  },
+  {
+    "title": "Lego Movie",
+    "text": "My favourite movie is lego movie",
+    "id": "aab58f54-ea3f-46eb-a61c-68d41f848314"
   }
 ]

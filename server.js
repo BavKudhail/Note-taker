@@ -36,7 +36,7 @@ app.get("/api/notes", (req, res) => {
   console.log(noteData[0].text);
 });
 
-// create a note
+// Create a note
 app.post("/api/notes", (req, res) => {
   const newNote = {
     title: req.body.title,
@@ -47,4 +47,9 @@ app.post("/api/notes", (req, res) => {
   noteData.push(newNote);
 
   res.json(noteData);
+
+  //   Add new note to the note-database
+  fs.writeFile("db/db.json", JSON.stringify(noteData, null, 2), (err) => {
+    if (err) throw err;
+  });
 });
