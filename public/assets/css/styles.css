@@ -5,6 +5,17 @@ body {
   padding: 0;
 }
 
+.bg-custom {
+  background-image: linear-gradient(340deg, #7f23f5 0%, #a970f2 100%);
+}
+
+.pinkBtn {
+  background-image: linear-gradient(340deg, #f5458a 0%, #ff6584 100%);
+}
+.pinkBtn:hover {
+  background-image: linear-gradient(340deg, #ee2a79 0%, #ff2550 100%);
+}
+
 .save-note {
   display: none;
 }

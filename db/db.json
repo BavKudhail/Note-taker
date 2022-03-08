@@ -1,26 +1,12 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text"
-  },
-  {
-    "title": "Batman",
-    "text": "Watch the new Batman movie that is coming in cinema",
+    "title": "Watch Batman",
+    "text": "the new batman comes out next week, remember to book 5 tickets",
     "id": "0fec5942-f70c-41f9-87f2-b1524a1001ba"
   },
   {
-    "title": "Fast & Furious",
-    "text": "Wick What\n",
-    "id": "67ad03c5-31ba-425f-9472-fa901f1fa0e1"
-  },
-  {
-    "title": "Lego Movie",
-    "text": "My favourite movie is lego movie",
-    "id": "aab58f54-ea3f-46eb-a61c-68d41f848314"
-  },
-  {
-    "title": "Pink Panther",
-    "text": "Is awesome",
-    "id": "38fb31f8-66a3-4ba4-bfe9-88dd8591bd6d"
+    "title": "Collect my Ferrari",
+    "text": "Ferrari is coming, remember to collect it",
+    "id": "6370a259-bad2-4e21-bbca-93e6b3090c02"
   }
 ]
