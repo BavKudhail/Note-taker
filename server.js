@@ -50,8 +50,8 @@ app.post("/api/notes", (req, res) => {
 
   res.json(noteData);
 
-  //   Add new note to the note-database
-  fs.writeFile("db/db.json", JSON.stringify(noteData, null, 2), (err) => {
+  // Add new note to the note-database
+  fs.writeFile("db/db.json", JSON.stringify(noteData), (err) => {
     if (err) throw err;
   });
 });
@@ -61,7 +61,7 @@ app.delete("/api/notes/:id", (req, res) => {
   let { id } = req.params;
   noteData = noteData.filter((note) => note.id !== id);
   res.send(`User with the id ${id} has been deleted from the database`);
-  fs.writeFile("db/db.json", JSON.stringify(noteData, null, 2), (err) => {
+  fs.writeFile("db/db.json", JSON.stringify(noteData), (err) => {
     if (err) throw err;
   });
 });
